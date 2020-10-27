@@ -27,6 +27,18 @@ body {
     position: relative;
 }
 
+.images-container > img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.images-container > img.current {
+    display: block;
+}
+
 .images-container::after {
     content: '\f060';
     font-weight: bold;
@@ -36,6 +48,7 @@ body {
     left: -45px;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .images-container::before {
