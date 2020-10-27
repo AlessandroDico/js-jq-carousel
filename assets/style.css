@@ -24,4 +24,27 @@ body {
     height: 500px;
     background-color: white;
     margin: auto;
+    position: relative;
+}
+
+.images-container::after {
+    content: '\f060';
+    font-weight: bold;
+    font-family: 'font awesome 5 free';
+    font-size: 35px;
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.images-container::before {
+    content: '\f061';
+    font-weight: bold;
+    font-family: 'font awesome 5 free';
+    font-size: 35px;
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
 }
