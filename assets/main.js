@@ -42,11 +42,17 @@ QUESTO .LENGTH INDICA QUANTI ELEMENTI CI SONO ALL'INTERNO DI QUELLA VAR.. E IN Q
 
         activeClass.removeClass('current');
 
+        var activePoint = $('.point-switcher .fas');
+        activePoint.removeClass('fas');
+
         if (activeClass.prev('img').length) {
 /*equivale a (activeClass.next('img').length == 1)*/
             activeClass.prev('img').addClass('current');
+            activePoint.addClass('far');
+            activePoint.prev('i').addClass('fas');
         } else {
             $('.images-container img:last-of-type').addClass('current');
+            $('.point-switcher i:last-child').addClass('fas');
         }
     });
 
