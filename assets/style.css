@@ -1,3 +1,4 @@
+/* REGOLE GENERICHE */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,9 @@ body {
     max-width: 1170px;
     margin: auto;
 }
+
+/* FINE REGOLE GENERICHE */
+
 
 .title {
     display: flex;
@@ -35,10 +39,12 @@ body {
     object-position: center;
 }
 
+/* classe corrente per l'img corrente nel carosello */
 .images-container > img.current {
     display: block;
 }
 
+/* AGGIUNGO FRECCE CAROSELLO CON AFTER E BEFORE */
 .images-container::after {
     content: '\f060';
     font-weight: bold;
@@ -63,6 +69,7 @@ body {
     cursor: pointer;
 }
 
+/* PALLINI CHE DEVONO CAMBIARE AL CLICK */
 .point-switcher {
     position: absolute;
     left: 50%;
