@@ -5,14 +5,17 @@ $(document).ready(function(){
 
     // cliccando sulla freccia sinistra scorro le img in dietro
 
-    $('.images-container::after').click(function(){
+    $('.right-arrow').click(function(){
         // var activeClass = $('current');
+        var activeClass = $('img.current')
+        console.log(activeClass);
 
 
-        $('img.current').removeClass('current');
+        activeClass.removeClass('current');
+        console.log(activeClass);
 
-        // activeClass.next().addClass('current');
-        // console.log(activeClass);
+        activeClass.next().addClass('current');
+        console.log(activeClass);
     });
 
 

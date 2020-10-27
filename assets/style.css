@@ -40,6 +40,7 @@ body {
     display: flex;
     justify-content: center;
     font-size: 30px;
+    cursor: pointer;
 }
 
 /* le immagini dovranno avere il display none e solo quella con la classe 'current' deve esssere visibile */
