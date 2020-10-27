@@ -47,4 +47,13 @@ body {
     right: -45px;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.point-switcher {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
