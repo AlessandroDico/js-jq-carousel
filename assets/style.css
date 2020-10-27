@@ -23,13 +23,26 @@ body {
     padding: 50px 0;
 }
 
+.carosello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .images-container {
     width: 700px;
     height: 500px;
     background-color: white;
-    margin: auto;
     position: relative;
 }
+
+.left-arrow, .right-arrow {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+/* le immagini dovranno avere il display none e solo quella con la classe 'current' deve esssere visibile */
 
 .images-container > img {
     display: none;
@@ -44,30 +57,6 @@ body {
     display: block;
 }
 
-/* AGGIUNGO FRECCE CAROSELLO CON AFTER E BEFORE */
-.images-container::after {
-    content: '\f060';
-    font-weight: bold;
-    font-family: 'font awesome 5 free';
-    font-size: 35px;
-    position: absolute;
-    left: -45px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-.images-container::before {
-    content: '\f061';
-    font-weight: bold;
-    font-family: 'font awesome 5 free';
-    font-size: 35px;
-    position: absolute;
-    right: -45px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
 
 /* PALLINI CHE DEVONO CAMBIARE AL CLICK */
 .point-switcher {
