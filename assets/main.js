@@ -25,7 +25,6 @@ QUESTO .LENGTH INDICA QUANTI ELEMENTI CI SONO ALL'INTERNO DI QUELLA VAR.. E IN Q
 /*equivale a (activeClass.next('img').length == 1)*/
             activeClass.next('img').addClass('current');
 
-
             activePoint.addClass('far');
             activePoint.next('i').addClass('fas');
             // activePoint.next().toggleClass('fas far');
@@ -55,6 +54,37 @@ QUESTO .LENGTH INDICA QUANTI ELEMENTI CI SONO ALL'INTERNO DI QUELLA VAR.. E IN Q
             $('.point-switcher i:last-child').addClass('fas');
         }
     });
+
+
+//  click sul pallino che cambia pallino e immagine
+
+    $('.point-switcher i').click(function(){
+
+
+        //  pallino corrente = a pallino con classe fas
+        var pallino_corrente = $('.point-switcher i.fas');
+        // tolgo la classe fas al pallino corrente e aggiungo la classe far
+        pallino_corrente.removeClass('fas').addClass('far');
+        // aggiungo la classe fas al pallino su cui l'utente ha cliccato
+        $(this).addClass('fas');
+
+        var activeClass = $('img.current')
+
+        activeClass.removeClass('current');
+
+// qua gli sto dicendo che indice_pallino è uguale all'indice (index) pallino cliccato
+        var indicePallino = $(this).index();
+        console.log(indicePallino);
+
+// qua gli sto dicendo all'immagine di images-container che equivale al valore dell'indice del pallino dai la classe current
+        $('.images-container img').eq(indicePallino).addClass('current');
+
+
+
+    });
+
+
+
 
 
 });
